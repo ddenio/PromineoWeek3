@@ -82,11 +82,114 @@ console.log("The sum of the elements in my nameLengths array is: " + sum3);     
 
 //Taking Dinner break here, committing and pushing changes up to this point.
 
+//7. Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times. (i.e. if I pass in ‘Hello’ and 3, I would expect the function to return ‘HelloHelloHello’).
 
 
+function wordUse(word, n) {
+    return word.repeat(n);                //Found repeat() method online as way to repeat a string n number of times, very cool!
+}
+console.log(wordUse("Hello", 6));
 
+//8. Write a function that takes two parameters, firstName and lastName, and returns a full name (the full name should be the first and the last name separated by a space).
 
+function fullName(firstName, lastName) {
+    return firstName + ' ' + lastName
+}
 
+console.log(fullName('Derin', 'DeNio'));  //calling our function
 
+//9. Write a function that takes an array of numbers and returns true if the sum of all the numbers in the array is greater than 100.
+
+var arrayNum = [3, 4, 6, 8, 500];    // array of numbers initialized
+
+function numArray(array) {
+    sum = 0;
+    for (let i = 0; i <=array.length-1; i++) {
+        sum = sum + array[i];                           //sum of our initial array numbers
+        //console.log(sum);        making sure my sum is calculating correctly
+    }
+    if (sum > 100) {
+        return true
+    }
+    else {
+        return false
+    }
+}
+
+console.log(numArray(arrayNum));   //calling our function
+
+//10. Write a function that takes an array of numbers and returns the average of all the elements in the array.
+
+var arrayNum2 = [3, 4, 6, 8, 1000];       // inital array of numbers
+
+function numAvg(array) {
+    sum = 0;
+    for (let i = 0; i <=array.length-1; i++) {
+        sum = sum + array[i];
+    }
+    var avg = sum/array.length;             //creating our variable to calculate average
+    return "The average of the elements in our array is: " + avg    //returning string with results to be used in our call
+}
+
+console.log(numAvg(arrayNum2));        //calling our function
+
+//11. Write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the average of the elements in the second array.
+
+var arrayA = [5000, 7, 9, 10];          //setting initial array input variables
+var arrayB = [10000, 300, 400];
+
+function arrayCompare(array1, array2) {
+    suma = 0;
+    sumb = 0;
+    for (let i = 0; i <=array1.length-1; i++) {
+        suma = suma + array1[i];                       //Iterating through my arrays and calculating the sum of my input arrays
+    }
+    for (let i = 0; i <=array2.length-1; i++) {
+        sumb = sumb + array2[i];
+    }
+    var avga = suma / array1.length;                   //creating my average variables
+    var avgb = sumb / array2.length;
+    //console.log(avga);                    <--Double checking my averages
+    //console.log(avgb);
+    if (avga > avgb) {
+        return true
+    }
+    else {
+        return false
+    }
+}
+
+console.log(arrayCompare(arrayA, arrayB));             //compared a few differtn numbers for both inital arrays, loooks like it works!!
+
+//12. Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50.
+
+var isHotOutside = false;                   //setting initial boolean hot outside value
+var moneyInPocket = 15;                           //setting initial money value
+
+function willBuyDrink(HotOutside, money) {
+    if (HotOutside == true && money > 10.5) {           //both boolean operators have to be true (&&)
+        return true
+    }
+    else {
+        return false
+    }
+}
+
+console.log(willBuyDrink(isHotOutside, moneyInPocket));        //tested with both boolean cases being true, and then one being false to see output change
+
+//13. Create own function. A function that tell us which venue we need for amount of people coming to event. If amount of people is less than 10, we will use our house for event. If amount of people is over 10, we will use outdoor public Gazeebo.
+var peopleAttending = ['John', 'Cait', 'Sally', 'Gretta', 'Karen', 'Matt', 'Cisco', 'Joe', 'Wes', 'Jenn', 'Colleen', 'Mac'];  //initial list of people attending event
+
+function venueChoice(people) {
+    if (people.length >= 10) {             //if list of people is greater than or equal to
+        return 'We will need to use the public gazeebo, as we have ' + people.length + ' people attending!'
+    }
+    else                                 // if list of people attending is less than 10
+        return 'We have enough space to use our house for ' + people.length + ' people.'
+}
+
+console.log(venueChoice(peopleAttending));        //Tested right at 10 people, tested under 10 people, and tested over 10 people; works great! :)
+
+//All finished!!! Final Commit and push here :)
 
 
