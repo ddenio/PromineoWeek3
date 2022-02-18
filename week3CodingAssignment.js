@@ -59,6 +59,31 @@ console.log(name.trim());              //logging end result, found trim() method
 //Question 3 & 4 answers are on word doc
 //Committing here and pushing to github
 
+//5. Create a new array called nameLengths. Write a loop to iterate over the previously created names array and add the length of each name to the nameLengths array.
+
+var namesArray = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];
+var nameLengths = [];                           //creating empty array for our new data
+
+for (let i = 0; i <=namesArray.length-1; i++) {   //iterating through our initial array
+    namesArrayLength = namesArray[i].length;         //created new variable to go through each names length
+    nameLengths.push(namesArrayLength);           //while we iterate through our loop, each length will be pushed into our empty starting array!
+}
+console.log(nameLengths);            ///console data looks good! [3, 5, 3, 5, 4, 3]
+
+//6. Write a loop to iterate over the nameLengths array and calculate the sum of all the elements in the array. Print the result to the console.
+let sum3 = 0;         //creating our placeholder sum variable
+
+for (let i = 0; i <=nameLengths.length-1; i++) {
+    sum3 = sum3 + nameLengths[i];
+    //console.log(sum3);   <-- making sure my sum3 variable is iterating correctly; looks good
+}
+
+console.log("The sum of the elements in my nameLengths array is: " + sum3);      //Sum3 = 23, looks good!
+
+//Taking Dinner break here, committing and pushing changes up to this point.
+
+
+
 
 
 
